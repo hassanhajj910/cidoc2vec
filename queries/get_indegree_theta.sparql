@@ -1,0 +1,7 @@
+SELECT DISTINCT ?t ?r ?h
+WHERE {
+  BIND(<{ITEM}> as ?t).
+  ?h ?r ?t.
+}
+
+

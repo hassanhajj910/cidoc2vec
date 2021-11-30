@@ -1,0 +1,25 @@
+PREFIX efrbroo: <http://erlangen-crm.org/efrbroo/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ecrm: <http://erlangen-crm.org/current/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sphaera: <http://ontologies.mpiwg-berlin.mpg.de/sphaera/>
+PREFIX sphType:<http://sphaera.mpiwg-berlin.mpg.de/id/thes/type/>
+PREFIX sp: <http://spinrdf.org/sp#>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX rs: <http://www.researchspace.org/ontology/>
+PREFIX crmDig: <http://www.ics.forth.gr/isl/CRMdig/>
+
+
+SELECT ?id
+WHERE{
+    BIND(<{object}> as ?s)
+	?s a sphaera:Book;
+		ecrm:P1_is_identified_by ?idtype.
+  	?idtype ecrm:P2_has_type <http://ontologies.mpiwg-berlin.mpg.de/sphaera/customIdentifier>.
+  	?idtype ecrm:P3_has_note ?id.
+
+  
+}

@@ -1,0 +1,6 @@
+SELECT ?h ?r ?t 
+WHERE {
+	BIND(<{object_tail}> as ?t)
+    BIND(<{object_relation}> as ?r)
+    ?h ?r ?t    
+}

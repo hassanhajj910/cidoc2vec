@@ -1,0 +1,5 @@
+SELECT ?h ?r ?t 
+WHERE {
+	BIND(<{object}> as ?h)
+    ?h ?r ?t    
+}
