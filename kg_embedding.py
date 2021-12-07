@@ -316,7 +316,8 @@ def branch_walk_rdf(rdf_graph, init_sparql:str, base:str, depth:int, iteration =
                     break
             
             # After imitial step, start weight RSW walks with chosen threshold. 
-            h, r, t, flag, betas = RSW(res, rdf_graph,  h, r, t, betas, walktype='weighed', threshold= 2.5)
+            # h, r, t, flag, betas = RSW(res, rdf_graph,  h, r, t, betas, walktype='weighed', threshold= 2.5)
+            h, r, t, flag, betas = RSW(res, rdf_graph,  h, r, t, betas, walktype='random')
             restart = False             # defaults restart back to False. 
             # if flag is True means that walk was restarted and thus walk should NOT continue. 
             if flag == True:
